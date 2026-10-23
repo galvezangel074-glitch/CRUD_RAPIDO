@@ -60,17 +60,19 @@
 ### 1.2 Instalación desde este repositorio
 
 ```bash
-git clone <url-de-este-repositorio> crud_rapido
+git clone https://github.com/galvezangel074-glitch/CRUD_RAPIDO.git crud_rapido
 cd crud_rapido
 composer install            # dependencias de PHP (vendor/)
 npm install                 # dependencias de Node (node_modules/)
-copy .env.example .env      # Linux/macOS: cp .env.example .env
+copy .env.example .env      # Linux/macOS: cp .env.example .env (este repositorio ya incluye el .env)
 php artisan key:generate
 # crear la base de datos crud_rapido en phpMyAdmin (o importar el backup, sección 4.5)
 php artisan migrate
 npm run build
 php artisan serve           # http://127.0.0.1:8000
 ```
+
+> Este repositorio incluye la carpeta `vendor/`. No incluye `.env`, `node_modules/` ni `public/build/`: se generan con `copy .env.example .env`, `php artisan key:generate`, `npm install` y `npm run build`. El `.env.example` ya trae la configuración de MySQL del laboratorio (sección 2).
 
 ### 1.3 Secuencia de comandos utilizada en el laboratorio (según la guía)
 
